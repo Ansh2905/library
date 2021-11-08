@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+    <header>
+        <div class = "heading">
+            <h1 class = "library-text">Your Library</h1>
+        </div>
+    </header>
+    <div class = "container">
+        <button class = "btn">Add a book to the library</button>
+    </div>
+    <div class = "book-grid">
+
+    </div>
+    <div id = "form-container">
+        <form id = "form" action = "/script.js">
+            <h1 class = "form-title-text">
+                New Book
+            </h1>
+            <button id = "close-form">X</button>
+            <div class = "user-input">
+                <label for="title">Title</label>
+                <input type="text" placeholder="Enter title" name="title" id = "title" required>
+            </div>
+            <div class = "user-input">
+                <label for="author">Author</label>
+                <input type="text" placeholder="Enter name of author" name="author" id = "author" required>
+            </div>
+            <div class = "user-input">
+                <label for="pages">Pages</label>
+                <input type="number" placeholder="Enter number of pages" name="pages" id = "pages" required>
+            </div>
+            <div class = "user-input">
+                <legend>Have you read the book?</legend>
+                <div>
+                    <input type="radio" id="yes" name="read" value="yes">
+                    <label for="yes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="no" name="read" value="no">
+                    <label for="no">No</label>
+                </div>
+            </div>
+            <div class = "user-input">
+                <button type="submit" form = 'form' id = "submit-form">Submit</button>
+    
+            </div>
+        </form>
+    </div>
+    <script src = "script.js"></script>
+</body>
+</html>
+

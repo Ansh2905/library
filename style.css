@@ -1,0 +1,142 @@
+@font-face{
+    font-family: fancyFont;
+    src: url(nice-year-font/Niceyear-mLZ59.ttf);
+}
+
+.heading
+{
+    font-family: fancyFont;
+    font-size: 30px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-bottom: 5px black solid;
+}
+
+.container
+{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.btn 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 40px;
+    font-family: fancyFont;
+    color: white;
+    background-color: rgb(218, 23, 23);
+    cursor: pointer;
+    height: 60px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px #888888;
+}
+
+.btn:active
+{
+    box-shadow: inset 0px 0px 10px #c1c1c1;
+}
+
+#form
+{
+    font-family: fancyFont;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-input
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-bottom: 20px; 
+}
+
+input[type=text] 
+{
+    font-size: 20px;
+    height: 30px;
+    width: 200px;
+    font-family: fancyFont;
+}
+
+input[type=number] 
+{
+    font-size: 20px;
+    font-family: fancyFont;
+    height: 30px;
+    width: 200px;
+}
+
+#submit-form
+{
+    width: 150px;
+    font-family: fancyFont;
+    font-size: 20px;
+    align-content: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+#close-form
+{
+    font-size: 20px;
+    width: 10px;
+    position: relative;
+    bottom: 80px;
+    left: 280px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#form-container
+{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    position: fixed;
+    background-color: rgb(0,0,0, 0.3);
+}
+
+#form
+{
+    margin: auto;
+    margin-top: 200px;
+    padding: 20px;
+    width: 300px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.book-grid
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.book-content
+{
+    display: flex;
+    justify-content: center;
+}
+
+.book
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px;
+    width: 300px;
+}
+
+
