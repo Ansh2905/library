@@ -11,10 +11,10 @@ submitBtn.addEventListener('click', resetForm);
 submitBtn.addEventListener('click', () => popUp.style.display = "none");
 
 
-
 let closeBtn = document.querySelector("#close-form");
 closeBtn.addEventListener('click', resetForm);
 closeBtn.addEventListener('click', () => popUp.style.display = "none");
+
 
 
 function Book(title, author, pages, read){
@@ -43,25 +43,50 @@ function addBookToLibrary(e)
     }
     newBook = new Book(titleElement, authorElement, pagesElement, read);
     
-    addGridElement(newBook);
+    addGridElement(newBook, read);
+    
 }
 
-function addGridElement(newBook)
+function addGridElement(newBook, read)
 {
     let card= document.createElement('div');
     let titlePara = document.createElement('div');
     let authorPara = document.createElement('div');
     let pagesPara = document.createElement('div');
+
+    let readButton = document.createElement('button');
+    readButton.classList = "card-buttons book-content read-button";
+
+    if(read == "Read")
+    {
+        readButton.style.backgroundColor = "green";
+    }
+    else if(read == "Not Read")
+    {
+        readButton.style.backgroundColor = "rgb(218, 23, 23)";
+    }
+
     titlePara.textContent = `Title: ${newBook.title}`;
     authorPara.textContent = `Author: ${newBook.author}`;
     pagesPara.textContent = `Pages: ${newBook.pages}`;
     titlePara.classList.add('book-content');
     authorPara.classList.add('book-content');
     pagesPara.classList.add('book-content');
+
+    readButton.textContent = newBook.read;
+    let removeBookButton = document.createElement('button');
+    removeBookButton.textContent = "Remove";
+    removeBookButton.classList = 'book-content card-buttons remove-button';
+
     card.appendChild(titlePara);
     card.appendChild(authorPara);
     card.appendChild(pagesPara);
+    card.appendChild(readButton);
+    card.appendChild(removeBookButton);
     card.classList.add('book');
     let bookGrid = document.querySelector('.book-grid');
     bookGrid.appendChild(card);
+    myLibrary.push(newBook);
+    console.log(myLibrary[1]);
 }
+
