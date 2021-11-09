@@ -45,6 +45,7 @@ function addBookToLibrary(e)
     
     addGridElement(newBook, read);
     activateReadButtons();
+    activateRemoveButtons();
 }
 
 function addGridElement(newBook, read)
@@ -108,6 +109,18 @@ function changeReadStatus(e)
         e.target.textContent = "Not Read";
         e.target.style.backgroundColor = "rgb(218, 23, 23)";
     }
+}
+
+function activateRemoveButtons()
+{
+    let removeButtons = document.querySelectorAll('.remove-button');
+    removeButtons.forEach(button => button.addEventListener('click', removeBook));
+}
+
+function removeBook(e)
+{
+    let books = document.querySelector('.book-grid');
+    books.removeChild(e.target.parentElement); 
 }
 
 
