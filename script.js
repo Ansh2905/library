@@ -44,7 +44,7 @@ function addBookToLibrary(e)
     newBook = new Book(titleElement, authorElement, pagesElement, read);
     
     addGridElement(newBook, read);
-    
+    activateReadButtons();
 }
 
 function addGridElement(newBook, read)
@@ -89,4 +89,25 @@ function addGridElement(newBook, read)
     myLibrary.push(newBook);
     console.log(myLibrary[1]);
 }
+
+function activateReadButtons()
+{
+    let readButtons = document.querySelectorAll('.read-button');
+    readButtons.forEach(button => button.addEventListener('click', changeReadStatus));
+}
+
+function changeReadStatus(e)
+{
+    if(e.target.textContent == "Not Read")
+    {
+        e.target.textContent = "Read";
+        e.target.style.backgroundColor = "green";
+    }
+    else if(e.target.textContent == "Read")
+    {
+        e.target.textContent = "Not Read";
+        e.target.style.backgroundColor = "rgb(218, 23, 23)";
+    }
+}
+
 
